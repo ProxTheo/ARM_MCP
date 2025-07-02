@@ -1,0 +1,358 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Tue Apr  8 10:58:24 2025
+| Host         : DESKTOP-4904BLP running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Nexys_A7_control_sets_placed.rpt
+| Design       : Nexys_A7
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   280 |
+|    Minimum number of control sets                        |   280 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    10 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   280 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |   256 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    22 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             166 |          103 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              48 |           16 |
+| Yes          | No                    | No                     |            1984 |         1028 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             672 |          353 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------------+----------------------------------------------------------+-------------------------------------------------------+------------------+----------------+--------------+
+|               Clock Signal              |                       Enable Signal                      |                    Set/Reset Signal                   | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------------------------+----------------------------------------------------------+-------------------------------------------------------+------------------+----------------+--------------+
+|  CLK100MHZ_IBUF_BUFG                    |                                                          |                                                       |                3 |              5 |         1.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_303[0] |                                                       |                7 |              8 |         1.14 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_88[0]  |                                                       |                1 |              8 |         8.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_94[0]  |                                                       |                7 |              8 |         1.14 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_95[0]  |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[4]_3[0]   |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_98[0]  |                                                       |                8 |              8 |         1.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_415    | my_computer/my_controller/FSM_onehot_state_reg[0]_0   |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_416    | my_computer/my_controller/FSM_onehot_state_reg[0]_628 |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_466    | my_computer/my_controller/FSM_onehot_state_reg[0]_633 |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_420    | my_computer/my_controller/FSM_onehot_state_reg[4]_26  |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_427    | my_computer/my_controller/FSM_onehot_state_reg[4]_27  |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_437    | my_computer/my_controller/FSM_onehot_state_reg[0]_632 |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_432    | my_computer/my_controller/FSM_onehot_state_reg[0]_630 |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_470    | my_computer/my_controller/FSM_onehot_state_reg[0]_634 |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_482    | my_computer/my_controller/FSM_onehot_state_reg[0]_635 |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_483    | my_computer/my_controller/FSM_onehot_state_reg[0]_636 |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_421    | my_computer/my_controller/FSM_onehot_state_reg[0]_629 |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_486    | my_computer/my_controller/FSM_onehot_state_reg[0]_638 |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[4]_12     | my_computer/my_controller/FSM_onehot_state_reg[4]_0   |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[4]_23     | my_computer/my_controller/FSM_onehot_state_reg[0]_631 |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[4]_25     | my_computer/my_controller/FSM_onehot_state_reg[0]_637 |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[4]_13     | my_computer/my_controller/FSM_onehot_state_reg[0]_385 |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_266[0] |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_285[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_300[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_306[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_253[0] |                                                       |                1 |              8 |         8.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_287[0] |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_294[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_278[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_283[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_265[0] |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_305[0] |                                                       |                8 |              8 |         1.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_307[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_292[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_296[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_274[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_258[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_288[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_290[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_302[0] |                                                       |                7 |              8 |         1.14 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_291[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_270[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_286[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_299[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_276[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_293[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_260[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_284[0] |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_304[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_257[0] |                                                       |                8 |              8 |         1.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_262[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_267[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_269[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_277[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_255[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_282[0] |                                                       |                7 |              8 |         1.14 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_297[0] |                                                       |                7 |              8 |         1.14 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_271[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_272[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_273[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_275[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_289[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_254[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_259[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_256[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_264[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_279[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_280[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_90[0]  |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_295[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_298[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_263[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_268[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_261[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_410[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_411[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_407[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_412[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_413[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_414[0] |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_310[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_311[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_309[0] |                                                       |                7 |              8 |         1.14 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_402[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_403[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_404[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_313[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_308[0] |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_406[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_409[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_312[0] |                                                       |                7 |              8 |         1.14 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_405[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_408[0] |                                                       |                7 |              8 |         1.14 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_100[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/E[0]                           |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_101[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_106[0] |                                                       |                8 |              8 |         1.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_102[0] |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_128[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_129[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_116[0] |                                                       |                7 |              8 |         1.14 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_141[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_142[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_107[0] |                                                       |                8 |              8 |         1.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_111[0] |                                                       |                1 |              8 |         8.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_118[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_119[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_115[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_136[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_108[0] |                                                       |                8 |              8 |         1.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_120[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_134[0] |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_145[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_117[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_148[0] |                                                       |                7 |              8 |         1.14 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_123[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_127[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_149[0] |                                                       |                8 |              8 |         1.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_121[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_113[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_124[0] |                                                       |                7 |              8 |         1.14 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_135[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_109[0] |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_103[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_105[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_114[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_130[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_125[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_131[0] |                                                       |                7 |              8 |         1.14 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_132[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_112[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_110[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_126[0] |                                                       |                8 |              8 |         1.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_133[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_137[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_138[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_140[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_144[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_104[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_146[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_147[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_301    | my_computer/my_controller/FSM_onehot_state_reg[0]_384 |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_281    | my_computer/my_controller/FSM_onehot_state_reg[4]_16  |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_139    | my_computer/my_controller/FSM_onehot_state_reg[4]_6   |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_143    | my_computer/my_controller/FSM_onehot_state_reg[4]_7   |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_418[0] |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_436[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_485[0] |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_438[0] |                                                       |                1 |              8 |         8.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_469[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_458[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_429[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_454[0] |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_424[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_426[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_471[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_465[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_487[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_488[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_448[0] |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_441[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_442[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_446[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_451[0] |                                                       |                7 |              8 |         1.14 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_455[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_460[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_434[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_443[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_463[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_475[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_425[0] |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_450[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_457[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_477[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_478[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_484[0] |                                                       |                7 |              8 |         1.14 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_489[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_490[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_462[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_430[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_433[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_445[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_467[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_461[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_468[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_428[0] |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_449[0] |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_417[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_422[0] |                                                       |                8 |              8 |         1.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_423[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_435[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_439[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_440[0] |                                                       |                8 |              8 |         1.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_452[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_444[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_456[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_459[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_474[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_476[0] |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_453[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_472[0] |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_480[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_481[0] |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_419[0] |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_447[0] |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_431[0] |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_464[0] |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_473[0] |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_479[0] |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_85[0]  |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_81[0]  |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_77[0]  |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_83[0]  |                                                       |                7 |              8 |         1.14 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_70[0]  |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_76[0]  |                                                       |                8 |              8 |         1.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_80[0]  |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_66[0]  |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_68[0]  |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_69[0]  |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_67[0]  |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_72[0]  |                                                       |                7 |              8 |         1.14 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_74[0]  |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_75[0]  |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_78[0]  |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_82[0]  |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_84[0]  |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_71[0]  |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_79[0]  |                                                       |                7 |              8 |         1.14 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_73[0]  |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[4]_14[0]  |                                                       |                8 |              8 |         1.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[4]_15[0]  |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_93[0]  |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_91[0]  |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[4]_4[0]   |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_89[0]  |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_97[0]  |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_87[0]  |                                                       |                7 |              8 |         1.14 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[4]_19[0]  |                                                       |                8 |              8 |         1.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[4]_2[0]   |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[4]_24[0]  |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[4]_20[0]  |                                                       |                7 |              8 |         1.14 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[4]_9[0]   |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[4]_8[0]   |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[4]_1[0]   |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_96[0]  |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[4]_11[0]  |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[4]_22[0]  |                                                       |                4 |              8 |         2.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[4]_10[0]  |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_92[0]  |                                                       |                3 |              8 |         2.67 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_86[0]  |                                                       |                6 |              8 |         1.33 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[4]_5[0]   |                                                       |                5 |              8 |         1.60 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[0]_99[0]  |                                                       |                2 |              8 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[4]_17[0]  |                                                       |                7 |              8 |         1.14 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[4]_18[0]  |                                                       |                7 |              8 |         1.14 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[4]_21[0]  |                                                       |                7 |              8 |         1.14 |
+|  my_computer/my_controller/nextstate__0 |                                                          |                                                       |                4 |             11 |         2.75 |
+|  buttons_BUFG[4]                        |                                                          | debouncer_0/DI[0]                                     |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG                    |                                                          | mssd_0/idx_0                                          |                9 |             32 |         3.56 |
+|  CLK100MHZ_IBUF_BUFG                    | debouncer_0/count[0]0                                    |                                                       |                8 |             32 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG                    | debouncer_0/debouncer_count[4].count[4][0]_i_1_n_0       |                                                       |                8 |             32 |         4.00 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[2]_0[0]   |                                                       |                9 |             32 |         3.56 |
+|  buttons_BUFG[4]                        | my_computer/my_controller/FSM_onehot_state_reg[2]_1[0]   | debouncer_0/DI[0]                                     |               16 |             32 |         2.00 |
+| ~buttons_BUFG[4]                        | my_computer/my_datapath/reg_INST/E[0]                    | debouncer_0/DI[0]                                     |               12 |             32 |         2.67 |
+| ~buttons_BUFG[4]                        | my_computer/my_datapath/reg_INST/OUT_reg[14]_1[0]        | debouncer_0/DI[0]                                     |               13 |             32 |         2.46 |
+| ~buttons_BUFG[4]                        | my_computer/my_datapath/reg_INST/OUT_reg[15]_0[0]        | debouncer_0/DI[0]                                     |               19 |             32 |         1.68 |
+| ~buttons_BUFG[4]                        | my_computer/my_datapath/reg_INST/OUT_reg[13]_0[0]        | debouncer_0/DI[0]                                     |               19 |             32 |         1.68 |
+| ~buttons_BUFG[4]                        | my_computer/my_datapath/reg_INST/OUT_reg[15]_2[0]        | debouncer_0/DI[0]                                     |               16 |             32 |         2.00 |
+| ~buttons_BUFG[4]                        | my_computer/my_datapath/reg_INST/OUT_reg[15]_1[0]        | debouncer_0/DI[0]                                     |               16 |             32 |         2.00 |
+| ~buttons_BUFG[4]                        | my_computer/my_datapath/reg_INST/OUT_reg[15]_3[0]        | debouncer_0/DI[0]                                     |               20 |             32 |         1.60 |
+| ~buttons_BUFG[4]                        | my_computer/my_datapath/reg_INST/OUT_reg[15]_4[0]        | debouncer_0/DI[0]                                     |               20 |             32 |         1.60 |
+| ~buttons_BUFG[4]                        | my_computer/my_datapath/reg_INST/OUT_reg[15]_5[0]        | debouncer_0/DI[0]                                     |               18 |             32 |         1.78 |
+| ~buttons_BUFG[4]                        | my_computer/my_datapath/reg_INST/OUT_reg[15]_6[0]        | debouncer_0/DI[0]                                     |               18 |             32 |         1.78 |
+| ~buttons_BUFG[4]                        | my_computer/my_datapath/reg_INST/OUT_reg[12]_1[0]        | debouncer_0/DI[0]                                     |               17 |             32 |         1.88 |
+| ~buttons_BUFG[4]                        | my_computer/my_datapath/reg_INST/OUT_reg[12]_2[0]        | debouncer_0/DI[0]                                     |               20 |             32 |         1.60 |
+| ~buttons_BUFG[4]                        | my_computer/my_datapath/reg_INST/OUT_reg[14]_2[0]        | debouncer_0/DI[0]                                     |               16 |             32 |         2.00 |
+| ~buttons_BUFG[4]                        | my_computer/my_datapath/reg_INST/OUT_reg[12]_0[0]        | debouncer_0/DI[0]                                     |               16 |             32 |         2.00 |
+| ~buttons_BUFG[4]                        | my_computer/my_datapath/reg_INST/OUT_reg[14]_0[0]        | debouncer_0/DI[0]                                     |               18 |             32 |         1.78 |
+|  buttons_BUFG[4]                        |                                                          |                                                       |               96 |            150 |         1.56 |
++-----------------------------------------+----------------------------------------------------------+-------------------------------------------------------+------------------+----------------+--------------+
+
+

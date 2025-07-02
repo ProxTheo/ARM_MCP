@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1751464728" />
+    <testcase name="Multi_cycle_test" classname="Multi_Cycle_Test" file="C:\Users\bahar\EE446_EXP3_2515583\Test_exp3\Multi_Cycle_Test.py" lineno="199" time="0.03766632080078125" sim_time_ns="650000.001" ratio_time="17256795.65142232" />
+  </testsuite>
+</testsuites>
